@@ -24,7 +24,7 @@
 
     <script>
       function MediaPlayer(config) {
-        this.media = config.el;
+        this.media = config.videoSource;
       }
 
       MediaPlayer.prototype.play = function() {
@@ -44,7 +44,7 @@
       };
 
       const video = document.querySelector('video');
-      const player = new MediaPlayer({ el: video });
+      const player = new MediaPlayer({ videoSource: video });
 
       const button = document.querySelector('button');
       button.onclick = () => player.togglePlay();
